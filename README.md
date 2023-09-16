@@ -1,5 +1,6 @@
 # Example of Helm chart published to Github
 
+docs
 
 ## Creating default nginx chart
 ```
