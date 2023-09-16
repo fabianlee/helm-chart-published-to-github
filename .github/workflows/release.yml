@@ -1,4 +1,3 @@
-# testing
 name: Release Charts
 on:
   push:
@@ -25,6 +24,5 @@ jobs:
         uses: helm/chart-releaser-action@v1.5.0
         with:
           charts_dir: charts
-          pages_branch: gh-pages
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
