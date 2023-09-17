@@ -32,3 +32,20 @@ kubectl get secret sh.helm.release.v1.$release_name.v$revision -n $release_ns -o
 kubectl get pods --namespace default -l "app.kubernetes.io/name=nginx,app.kubernetes.io/instance=$release_name"
 
 ```
+
+# Creating tag that invokes Github Action
+
+```
+newtag=v1.0.1
+git commit -a -m "changes for new tag $newtag" && git push
+git tag $newtag && git push origin $newtag
+```
+
+# Deleting tag
+
+```
+# delete local tag, then remote
+todel=v1.0.1
+git tag -d $todel && git push origin :refs/tags/$todel
+```
+
