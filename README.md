@@ -22,7 +22,7 @@ helm install --dry-run $release_name charts/nginx/
 
 # show installed releases in cluster
 helm list --filter=$release_name
-helm history $release_name -ns $release_ns
+helm history $release_name -n $release_ns
 helm get values $release_name -n $release_ns
 
 # show metadata in secret
