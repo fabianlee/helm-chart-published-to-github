@@ -25,8 +25,8 @@ jobs:
 
       - name: Install Helm
         uses: azure/setup-helm@v3.5
-          with:
-            version: v3.12.3
+        with:
+          version: v3.12.3
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
 
