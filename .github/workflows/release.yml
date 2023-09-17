@@ -9,9 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     # https://docs.github.com/en/actions/using-jobs/assigning-permissions-to-jobs
     permissions:
-      contents: read # for actions/checkout
-      packages: write # for OCI build
-      actions: write
+      contents: write # for creating release
+      #packages: write # for OCI build
+      pages: write
     steps:
       - name: Checkout
         uses: actions/checkout@v3
