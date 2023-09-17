@@ -32,10 +32,11 @@ jobs:
         #  GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
 
       # worked to create release 'nginx-0.1.0' and tag 'nginx-0.1.0' and 'gh-pages/index.yaml'
+      # worked to create release 'nginx-0.8.0' and tag 'nginx-0.8.0' and 'gh-pages/index.yaml' using secrets.CR_TOKEN
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.5.0
         with:
           charts_dir: charts
         env:
-          #CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-          CR_TOKEN: "${{ secrets.CR_TOKEN }}"
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          #CR_TOKEN: "${{ secrets.CR_TOKEN }}"
