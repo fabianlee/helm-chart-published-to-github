@@ -3,16 +3,13 @@ on:
   push:
     branches:
       - main
-    # messed up publishing
-    #tags:
-    #  - 'v*'
 jobs:
   release:
     runs-on: ubuntu-latest
     # https://docs.github.com/en/actions/using-jobs/assigning-permissions-to-jobs
     permissions:
       contents: write # for creating Releases .tgz (403 from chart-releaser-action if not set)
-      #pages: write # writing to Github pages
+      #pages: write # not required for chart-releaser-action
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -24,8 +21,6 @@ jobs:
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
-      # worked to create release 'nginx-0.8.0' and tag 'nginx-0.8.0' and 'gh-pages/index.yaml' using secrets.CR_TOKEN
-      # worked to create release 'nginx-0.9.0' and tag 'nginx-0.9.0' and 'gh-pages/index.yaml' using secrets.GITHUB_TOKEN
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.5.0
         with:
