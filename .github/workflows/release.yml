@@ -10,7 +10,7 @@ jobs:
   release:
     runs-on: ubuntu-latest
     # https://docs.github.com/en/actions/using-jobs/assigning-permissions-to-jobs
-    permissions: {}
+    permissions:
       contents: write # for creating Releases .tgz (403 from chart-releaser-action if not set)
       #pages: write # writing to Github pages
     steps:
