@@ -3,6 +3,16 @@ entries:
   nginx:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2023-09-17T16:58:45.18220418Z"
+    description: A Helm chart for Kubernetes
+    digest: 5cb547838feba92e49d3d7f7029746531467f50a799ddf2ea432d0ef5910ecb6
+    name: nginx
+    type: application
+    urls:
+    - https://github.com/fabianlee/helm-chart-published-to-github/releases/download/nginx-0.10.0/nginx-0.10.0.tgz
+    version: 0.10.0
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2023-09-17T16:56:07.081960571Z"
     description: A Helm chart for Kubernetes
     digest: f2690d2a195beb8f86e2e432cc1c3ff4c97ded84692f36a7914f6a471c74b0c7
@@ -71,4 +81,4 @@ entries:
     urls:
     - https://github.com/fabianlee/helm-chart-published-to-github/releases/download/nginx-0.1.0/nginx-0.1.0.tgz
     version: 0.1.0
-generated: "2023-09-17T16:56:07.082000572Z"
+generated: "2023-09-17T16:58:45.182262383Z"
