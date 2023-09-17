@@ -10,7 +10,7 @@ jobs:
   release:
     runs-on: ubuntu-latest
     # https://docs.github.com/en/actions/using-jobs/assigning-permissions-to-jobs
-    permissions:
+    permissions: {}
       #contents: write # for creating Releases .tgz (not listed https://helm.sh/docs/howto/chart_releaser_action/)
       #pages: write # writing to Github pages
     steps:
